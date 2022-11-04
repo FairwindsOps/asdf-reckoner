@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest]
-        polaris: [7.0.1]
+        reckoner: [6.0.0]
 
     runs-on: ${{ matrix.os }}
 
@@ -15,6 +15,6 @@ jobs:
       - name: asdf_plugin_test
         uses: asdf-vm/actions/plugin-test@v1.0.0
         with:
-          command: "polaris version"
+          command: "reckoner version"
         env:
           GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }} # automatically provided
