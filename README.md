@@ -22,6 +22,7 @@ The `ASDF_reckoner_OVERWRITE_ARCH` variable can be used to override the architec
 ```
 % asdf install reckoner 6.0.0
 Downloading reckoner from https://github.com/FairwindsOps/reckoner/releases/download/v6.0.0/reckoner_6.0.0_darwin_amd64.tar.gz
+% asdf global reckoner 6.0.0
 ```
 
 ### With `ASDF_reckoner_OVERWRITE_ARCH`:
@@ -29,5 +30,5 @@ Downloading reckoner from https://github.com/FairwindsOps/reckoner/releases/down
 ```
 % ASDF_reckoner_OVERWRITE_ARCH=amd64 asdf install reckoner 6.0.0-rc.5
 Downloading reckoner from https://github.com/FairwindsOps/reckoner/releases/download/v6.0.0-rc.5/reckoner_6.0.0-rc.5_darwin_amd64.tar.gz
+% asdf global reckoner 6.0.0-rc.5
 ```
-
