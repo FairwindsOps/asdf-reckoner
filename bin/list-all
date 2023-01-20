@@ -9,7 +9,7 @@ function sort_versions() {
 }
 
 list_all_versions() {
-  curl --silent https://api.github.com/repos/FairwindsOps/reckoner/releases | jq ".. .tag_name? // empty"
+  curl -H 'Authorization: token $GITHUB_TOKEN' --silent https://api.github.com/repos/FairwindsOps/reckoner/releases | jq ".. .tag_name? // empty"
 }
 
 list_all_versions | sort_versions | xargs echo
