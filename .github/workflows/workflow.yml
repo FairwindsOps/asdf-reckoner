@@ -15,6 +15,8 @@ jobs:
       - name: asdf_plugin_test
         uses: asdf-vm/actions/plugin-test@v1.1.0
         with:
-          command: "reckoner version"
+          command: "${target_repo_name} version"
         env:
+          target_repo_name: reckoner
           GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }} # automatically provided
+          github_api_target_base_url: ${{ github.api_url }}/repos/${{ github.repository_owner }}

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-release_path=https://api.github.com/repos/FairwindsOps/reckoner/releases
+release_path="${github_api_target_base_url}/${target_repo_name}/releases"
 cmd="curl -s"
 if [ -n "$GITHUB_API_TOKEN" ]; then
   cmd="$cmd -H 'Authorization: token $GITHUB_API_TOKEN'"
