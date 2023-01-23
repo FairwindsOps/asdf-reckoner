@@ -1,10 +1,15 @@
-name: master
+name: Main workflow
 
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: 0 0 * * 5
 
 jobs:
-  build:
+  plugin_test:
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, macOS-latest]
         reckoner: [1.3.0]
