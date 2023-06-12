@@ -39,7 +39,6 @@ install_reckoner() {
   tar -zxf ${download_path} --directory $tmp_download_dir
   cp ${tmp_download_dir}/reckoner ${bin_install_path}
   chmod +x ${bin_install_path}/reckoner
-  echo "reckoner ${version}" >> ~/.tool-versions
 }
 
 get_arch() {
